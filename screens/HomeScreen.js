@@ -29,7 +29,7 @@ export default class HomeScreen extends React.Component {
   }
   
   componentWillMount(){
-    fetch('http://192.168.0.111/example/ourstories/getCompanyAddress.php', {
+    fetch('http://192.168.0.111/example/ourstories/getStoryinfo.php', {
       method: 'post',
       header:{
         'Accept': 'application/json',
@@ -39,7 +39,7 @@ export default class HomeScreen extends React.Component {
         key: 'test',
       })
     })
-    .then((response) => response.json())
+.then((response) => response.json())
       .then((responseJson) =>{
         this.setState ({ data: responseJson.companies })
       })
@@ -58,6 +58,7 @@ export default class HomeScreen extends React.Component {
     />
     // <Text>{item.Companyname}</Text>
   )
+
 
   render() {
     return (
