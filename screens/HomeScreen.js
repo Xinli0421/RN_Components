@@ -29,7 +29,7 @@ export default class HomeScreen extends React.Component {
   }
   
   componentWillMount(){
-    fetch('http://192.168.0.111/example/ourstories/getStoryinfo.php', {
+    fetch('https://tietojenkasittely.lapinamk.fi/bit16/teamthree/getCompanyAddress.php', {
       method: 'post',
       header:{
         'Accept': 'application/json',
